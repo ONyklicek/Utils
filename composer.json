@@ -10,8 +10,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Helper\\": "src/Helper/",
-      "Tool\\": "src/Tool"
+      "Helper\\": "src/Helper/"
     },
     "files": ["src/Tool.php"],
     "classmap": ["src/Helper", "src/Tool", "src/Tool.php"]
