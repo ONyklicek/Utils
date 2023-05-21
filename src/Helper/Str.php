@@ -94,11 +94,11 @@ final class Str
     /**
      * Determine if a given string starts with a given substring.
      *
-     * @param iterable|String $value
+     * @param string|array $value
      * @param boolean $caseSensitive
      * @return boolean
      */
-    public function startWith(Iterable|String $value, bool $caseSensitive = true): bool
+    public function startWith(string|array $value, bool $caseSensitive = true): bool
     {
         if(!is_iterable($value)) {
             $value = [$value];
@@ -116,11 +116,11 @@ final class Str
     /**
      * Determine if a given string ends with a given substring.
      *
-     * @param iterable|string $value
+     * @param string|array $value
      * @param bool $caseSencitive
      * @return bool
      */
-    public function endWith(iterable|string $value, bool $caseSencitive = true): bool
+    public function endWith(string|array $value, bool $caseSencitive = true): bool
     {
         if(!is_iterable($value)){
             $value = [$value];
