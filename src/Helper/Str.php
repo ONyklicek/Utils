@@ -10,14 +10,13 @@
 namespace Helper;
 
 use Traversable;
-use JetBrains\PhpStorm\Pure;
 
-class Str
+final class Str
 {
 
     protected string $item = "";
 
-    #[Pure] public function __construct($item)
+    final public function __construct(string $item)
     {
         $this->item = self::getStringItem($item);
     }
@@ -54,9 +53,9 @@ class Str
      * @param string $item
      * @return static
      */
-    public static function make(string $item = ""): static
+    public static function make(string $item = ""): Str
     {
-        return new static($item);
+        return new Str($item);
     }
 
     /**
