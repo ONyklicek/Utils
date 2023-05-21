@@ -18,7 +18,7 @@ final class Str
 
     final public function __construct(string $item)
     {
-        $this->item = self::getStringItem($item);
+        $this->item = $item;
     }
 
     /**
@@ -98,7 +98,7 @@ final class Str
      * @param boolean $caseSensitive
      * @return boolean
      */
-    public function startWith(Array|Iterable|String $value, bool $caseSensitive = true): bool
+    public function startWith(Iterable|String $value, bool $caseSensitive = true): bool
     {
         if(!is_iterable($value)) {
             $value = [$value];
@@ -116,11 +116,11 @@ final class Str
     /**
      * Determine if a given string ends with a given substring.
      *
-     * @param array|string $value
+     * @param iterable|string $value
      * @param bool $caseSencitive
      * @return bool
      */
-    public function endWith(array|string $value, bool $caseSencitive = true): bool
+    public function endWith(iterable|string $value, bool $caseSencitive = true): bool
     {
         if(!is_iterable($value)){
             $value = [$value];
@@ -156,18 +156,5 @@ final class Str
     public function get(): string
     {
         return (string) $this->item;
-    }
-
-    /**
-     * @param string $item
-     * @return string
-     */
-    protected function getStringItem(string $item): string
-    {
-        if (is_string($item)) {
-            return $item;
-        }
-
-        return (string) $item;
     }
 }
