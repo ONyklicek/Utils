@@ -12,10 +12,10 @@ jobs:
       - uses: php-actions/composer@v6
 
       - name: PHPUnit Tests
-        uses: php-actions/phpunit@master
-        env:
-          TEST_NAME: Scarlett
+        uses: php-actions/phpunit@v3
+
         with:
           bootstrap: vendor/autoload.php
           configuration: Test/phpunit.xml
-          args: --coverage-text
+          php_extensions: "xdebug"
+          coverage_clover: "coverage/clover.xml"
