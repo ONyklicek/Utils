@@ -94,7 +94,7 @@ final class Str
     /**
      * Determine if a given string starts with a given substring.
      *
-     * @param string|array $value
+     * @param string|array<string, int, float, bool> $value
      * @param boolean $caseSensitive
      * @return boolean
      */
@@ -116,7 +116,7 @@ final class Str
     /**
      * Determine if a given string ends with a given substring.
      *
-     * @param string|array $value
+     * @param string|array<string, int, float, bool> $value
      * @param bool $caseSencitive
      * @return bool
      */
