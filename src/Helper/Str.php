@@ -94,13 +94,13 @@ final class Str
     /**
      * Determine if a given string starts with a given substring.
      *
-     * @param array|string $value
+     * @param iterable|String $value
      * @param boolean $caseSensitive
      * @return boolean
      */
-    public function startWith(array|string $value, bool $caseSensitive = true): bool
+    public function startWith(Array|Iterable|String $value, bool $caseSensitive = true): bool
     {
-        if(!is_array($value) and  !$value instanceof Traversable) {
+        if(!is_iterable($value)) {
             $value = [$value];
         }
 
@@ -122,7 +122,7 @@ final class Str
      */
     public function endWith(array|string $value, bool $caseSencitive = true): bool
     {
-        if(!is_array($value) and  !$value instanceof Traversable) {
+        if(!is_iterable($value)){
             $value = [$value];
         }
 
