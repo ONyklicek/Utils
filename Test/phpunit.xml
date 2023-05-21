@@ -11,7 +11,7 @@
 >
     <testsuites>
         <testsuite name="Helper Test">
-            <directory>./Test/Helper</directory>
+            <directory>./Helper</directory>
         </testsuite>
     </testsuites>
 
