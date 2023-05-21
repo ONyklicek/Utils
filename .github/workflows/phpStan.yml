@@ -13,5 +13,5 @@ jobs:
     - name: Run phpstan
       uses: php-actions/phpstan@v3
       with:
-        path: Config Controller Core Model Public Views
+        path: src/Helper
         level: 5
