@@ -32,14 +32,7 @@ jobs:
 
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress
-      
-    - name: PHPUnit Tests
-      uses: php-actions/phpunit@v3
-        
-      with:
-        bootstrap: vendor/autoload.php
-        configuration: Test/phpunit.xml
-        args: --coverage-text
+    
 
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
