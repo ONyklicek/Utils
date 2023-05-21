@@ -1,7 +1,7 @@
 /.phpunit.cache
 /vendor
 .env
-/Test
+/Tests
 index.php
 composer.phar
 composer.lock
