@@ -1,0 +1,28 @@
+{
+  "name": "onyklicek/helper",
+  "type": "library",
+
+  "require": {
+    "php": ">=8.2",
+    "vlucas/phpdotenv": "^5.5@dev"
+  },
+
+  "autoload": {
+    "psr-4": {
+      "Helper\\": "src/Helper/",
+      "Tool\\": "src/Tool"
+    },
+    "files": ["src/Tool.php"],
+    "classmap": ["src/Helper", "src/Tool", "src/Tool.php"]
+  },
+  "authors": [
+    {
+      "name": "Ondřej Nyklíček",
+      "email": "ondrejnyklicek@icloud.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require-dev": {
+    "phpunit/phpunit": "^10"
+  }
+}

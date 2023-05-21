@@ -1,0 +1,16 @@
+/.phpunit.cache
+/vendor
+/Test
+src/Tool
+scr/Tool.php
+.env
+index.php
+composer.phar
+composer.lock
+.DS_Store
+Thumbs.db
+/phpunit.xml
+/.idea
+/.fleet
+/.vscode
+.phpunit.result.cache
