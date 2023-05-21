@@ -26,7 +26,7 @@ final class Str
      *
      * @return $this
      */
-    public function lower(): object
+    public function lower(): Str
     {
         $item = mb_strtolower($this->item, 'UTF-8');
 
@@ -39,7 +39,7 @@ final class Str
      *
      * @return $this
      */
-    public function upper()
+    public function upper(): Str
     {
         $item = mb_strtoupper($this->item, 'UTF-8');
 
@@ -65,7 +65,7 @@ final class Str
      * @param string $replace
      * @return $this
      */
-    public function replace($search, $replace)
+    public function replace($search, $replace): Str
     {
         $item = str_replace($search, $replace, $this->item);
 
@@ -80,7 +80,7 @@ final class Str
      * @param boolean $caseSensitive
      * @return $this
      */
-    public function remove($value, $caseSensitive = true)
+    public function remove(string $value, bool $caseSensitive = true): Str
     {
 
         $item = $caseSensitive
@@ -140,7 +140,7 @@ final class Str
      *
      * @return $this
      */
-    public function title()
+    public function title(): Str
     {
         $item = mb_convert_case($this->item , MB_CASE_TITLE, "UTF-8");
 
