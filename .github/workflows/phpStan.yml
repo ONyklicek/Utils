@@ -14,4 +14,4 @@ jobs:
       uses: php-actions/phpstan@v3
       with:
         path: src/Helper
-        level: 5
+        level: 7

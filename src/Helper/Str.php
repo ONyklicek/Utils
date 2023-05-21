@@ -76,7 +76,7 @@ final class Str
     /**
      * Remove the given value in the given string.
      *
-     * @param string value
+     * @param string $value
      * @param boolean $caseSensitive
      * @return $this
      */
