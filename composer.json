@@ -1,7 +1,9 @@
 {
-  "name": "onyklicek/helper",
+  "name": "onyklicek/helper-tool",
+  "description": "PHP helper tools to make your life easier.",
+  "keywords": ["php", "helper", "tool", "edit", "string"],
   "type": "library",
-
+  "license": ["BSD-3-Clause"],
   "require": {
     "php": ">=8.2",
     "vlucas/phpdotenv": "^5.5@dev"
