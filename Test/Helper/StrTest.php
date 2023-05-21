@@ -7,8 +7,9 @@
  * @IDE     PhpStorm
  */
 
-namespace Helper;
+namespace Helper\Helper;
 
+use Helper\Str;
 use PHPUnit\Framework\TestCase;
 
 class StrTest extends TestCase
