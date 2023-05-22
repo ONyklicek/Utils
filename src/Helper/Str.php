@@ -11,9 +11,6 @@ declare(strict_types=1);
 
 namespace Helper;
 
-use Traversable;
-use function _PHPStan_dec9e435a\RingCentral\Psr7\str;
-
 final class Str
 {
 
