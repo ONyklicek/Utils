@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types=1);
+//declare(strict_types=1);
 /**
  * Class Application
  *
@@ -85,6 +85,7 @@ final class Str
      *
      * @param string|array<string> $value
      * @param boolean $caseSensitive
+     * @param bool $removeSpace
      * @return $this
      */
     public function remove(string|array $value, bool $caseSensitive = true, bool $removeSpace = false): Str
@@ -105,6 +106,32 @@ final class Str
             self::removeSpace();
         }
         return $this;
+    }
+
+    /**
+     * Determine if contains a given string.
+     *
+     * @param string|array<string> $value
+     * @param bool $caseSensitive
+     * @return bool
+     */
+    public function contains(string|array $value, bool $caseSensitive = true): bool
+    {
+        /*if(!is_iterable($value)){
+            $value = [$value];
+        }*/
+
+        foreach((array) $value as $key){
+            if (!$caseSensitive){
+                $key = mb_strtolower($key);
+            }
+
+            if ($key !== '' and str_contains($this->item, $key)) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     /**
@@ -143,7 +170,7 @@ final class Str
         }
 
         foreach ($value as $key) {
-            if((string)$key !== '' and str_ends_with($caseSencitive ? $this->item : strtolower($this->item, ), $caseSencitive ? $key : strtolower($key))){
+            if((string)$key !== '' and str_ends_with($caseSencitive ? $this->item : strtolower($this->item), $caseSencitive ? $key : strtolower($key))){
                 return true;
             }
         }
@@ -171,7 +198,7 @@ final class Str
      */
     public function get(): string
     {
-        return (string) $this->item;
+        return $this->item;
     }
 
 

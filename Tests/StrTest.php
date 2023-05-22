@@ -1,4 +1,8 @@
 <?php
+
+ini_set('display_startup_errors', 1);
+
+
 /**
  * Class Application
  *
@@ -7,10 +11,8 @@
  * @IDE     PhpStorm
  */
 
-namespace Tests;
-
-use Helper\Str;
 use PHPUnit\Framework\TestCase;
+use Helper\Str;
 
 class StrTest extends TestCase
 {
@@ -20,6 +22,7 @@ class StrTest extends TestCase
         $this->assertEquals('Hello world', Str::make('Bay world')->replace('Bay', 'Hello')->get());
         $this->assertEquals('Hello world', Str::make('Is my world')->replace('Is my', 'Hello')->get());
         $this->assertEquals('Hello world', Str::make('Ahoj světe')->replace(['Ahoj' => 'Hello', 'světe' => 'world'])->get());
+        $this->assertEquals('aAA', Str::make('aAA')->get());
 
     }
 
@@ -73,7 +76,7 @@ class StrTest extends TestCase
     {
         $this->assertFalse(Str::make('helloWorld')->isSnakeCase());
         $this->assertTrue(Str::make('hello_world')->isSnakeCase());
-        $this->assertFalse(Str::make('hello_world')->isSnakeCase());
+        $this->assertTrue(Str::make('hello__world')->isSnakeCase());
         $this->assertFalse(Str::make('hello   WOrld')->isSnakeCase());
         $this->assertFalse(Str::make('hello_World')->isSnakeCase());
         $this->assertFalse(Str::make('hello___World')->isSnakeCase());
@@ -86,6 +89,6 @@ class StrTest extends TestCase
         $this->assertFalse( Str::make('hello world')->isCamelCase());
         $this->assertFalse( Str::make('hello    world')->isCamelCase());
         $this->assertFalse( Str::make('hello_World')->isCamelCase());
-        $this->assertFalse( Str::make('Hello___World')->isCamelCase());
+        $this->assertFalse( Str::make('Hello__::_World')->isCamelCase());
     }
 }
