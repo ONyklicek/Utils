@@ -1,7 +1,6 @@
 /.phpunit.cache
 /vendor
 .env
-/Tests
 index.php
 composer.phar
 composer.lock
@@ -12,3 +11,6 @@ Thumbs.db
 /.fleet
 /.vscode
 .phpunit.result.cache
+Tests/StrTest.php
+Tests/StrTest.php
+*.php

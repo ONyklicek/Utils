@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /**
  * Class Application
  *
@@ -10,6 +12,7 @@
 namespace Helper;
 
 use Traversable;
+use function _PHPStan_dec9e435a\RingCentral\Psr7\str;
 
 final class Str
 {
@@ -61,13 +64,20 @@ final class Str
     /**
      * Replace the given value in the given string.
      *
-     * @param string $search
-     * @param string $replace
+     * @param string|array<string> $search
+     * @param string|array<string> $replace
      * @return $this
      */
-    public function replace($search, $replace): Str
+    public function replace(string|array $search, string|array $replace = ''): Str
     {
-        $item = str_replace($search, $replace, $this->item);
+        if(is_iterable($search) and empty($replace)){
+            $item = $this->item;
+            foreach ($search as $key => $value) {
+                $item = str_replace($key, $value, $item);
+            }
+        } else {
+            $item = str_replace($search, $replace, $this->item);
+        }
 
         $this->item = $item;
         return $this;
@@ -76,18 +86,27 @@ final class Str
     /**
      * Remove the given value in the given string.
      *
-     * @param string $value
+     * @param string|array<string> $value
      * @param boolean $caseSensitive
      * @return $this
      */
-    public function remove(string $value, bool $caseSensitive = true): Str
+    public function remove(string|array $value, bool $caseSensitive = true, bool $removeSpace = false): Str
     {
+        if(!is_iterable($value)){
+            $value = [$value];
+        }
 
-        $item = $caseSensitive
-            ? str_replace($value, '', $this->item)
-            : str_ireplace($value, '', $this->item);
+        $item = $this->item;
+        foreach ($value as $key){
+            $item = $caseSensitive
+                ? str_replace($key, '', $item)
+                : str_ireplace($key, '', $item);
+        }
 
         $this->item = $item;
+        if($removeSpace){
+            self::removeSpace();
+        }
         return $this;
     }
 
@@ -156,5 +175,47 @@ final class Str
     public function get(): string
     {
         return (string) $this->item;
+    }
+
+
+    /**
+     * Removing excess space
+     *
+     * @return Str $this
+     */
+    public function removeSpace(): Str
+    {
+        $this->item = trim((string)preg_replace('~\s{2,}~', ' ', $this->item));
+        return $this;
+    }
+
+
+    /**
+     * @return bool
+     */
+    public function isSnakeCase(): bool
+    {
+        $snakeCase = (string)  preg_replace('/\s+/', '_', $this->item);
+        $snakeCase = (string)  preg_replace('/(.)(?=[A-Z])/u', '$1_', $snakeCase);
+        $snakeCase = strtolower($snakeCase); // Převede vše na malá písmena
+
+        if ($snakeCase === $this->item) {
+            return true;
+        }
+
+        return false;
+    }
+
+    public function isCamelCase(): bool
+    {
+        $camelCase = (string) str_replace(' ', '', ucwords($this->item));
+        $camelCase = (string) str_replace('_', '', $camelCase);
+        $camelCase = lcfirst($camelCase);
+
+        if ($camelCase === $this->item) {
+            return true;
+        }
+
+        return false;
     }
 }
