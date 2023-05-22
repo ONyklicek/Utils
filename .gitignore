@@ -12,6 +12,4 @@ Thumbs.db
 /.fleet
 /.vscode
 .phpunit.result.cache
-Tests/StrTest.php
-Tests/StrTest.php
 *.php
