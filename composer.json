@@ -25,7 +25,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Helper\\": "src/Helper/",
+      "Helper\\": "src/Helper/"
     },
     "classmap": ["src/Helper"]
   },
