@@ -2,6 +2,7 @@
   "name": "onyklicek/helper-tool",
   "description": "PHP helper tools to make your life easier.",
   "keywords": ["php", "helper", "tool", "edit", "string"],
+  "homepage": "https://github.com/ONyklicek/Helper-tool",
   "type": "library",
   "license": ["BSD-3-Clause"],
   "authors": [
@@ -11,9 +12,8 @@
     }
   ],
   "require": {
-    "php": ">=8.2",
+    "php": ">=8.1",
     "ext-mbstring": "*",
-    "vlucas/phpdotenv": "^5.5@dev"
   },
   "autoload": {
     "psr-4": {
@@ -25,7 +25,7 @@
   },
   "config": {
     "platform": {
-      "php": "8.2"
+      "php": "8.1.0"
     },
     "optimize-autoloader": true,
     "sort-packages": true
@@ -33,6 +33,6 @@
   "minimum-stability": "dev",
   "require-dev": {
     "phpstan/phpstan": "1.11.x-dev",
-    "phpunit/phpunit": "^10"
+    "phpunit/phpunit": "^9.6"
   }
 }
