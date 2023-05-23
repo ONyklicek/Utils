@@ -20,8 +20,8 @@
     "sort-packages": true
   },
   "require": {
-    "php": ">=8.1",
-    "ext-mbstring": "*"
+        "php": ">=8.1",
+        "ext-mbstring": "*"
   },
   "autoload": {
     "psr-4": {
