@@ -11,10 +11,6 @@
       "email": "ondrejnyklicek@icloud.com"
     }
   ],
-  "require": {
-    "php": ">=8.1",
-    "ext-mbstring": "*"
-  },
   "prefer-stable": true,
   "config": {
     "platform": {
@@ -23,12 +19,14 @@
     "optimize-autoloader": true,
     "sort-packages": true
   },
+  "require": {
+    "php": ">=8.1",
+    "ext-mbstring": "*"
+  },
   "autoload": {
     "psr-4": {
       "Helper\\": "src/Helper/",
-      "Tool\\": "src/Tool"
     },
-    "files": ["src/Tool.php"],
     "classmap": ["src/Helper"]
   },
   "require-dev": {
