@@ -1,25 +1,15 @@
 <?php
 
-ini_set('display_startup_errors', 1);
-
-
-/**
- * Class Application
- *
- * @autor   Ondrej Nyklicek <ondrejnykicek@icloud.com>
- * @project Helper
- * @IDE     PhpStorm
- */
-
 use PHPUnit\Framework\TestCase;
 use Helper\Str;
+
 
 class StrTest extends TestCase
 {
 
     public function testReplace()
     {
-        $this->assertEquals('Hello world', Str::make('Bay world')->replace('Bay', 'Hello')->get());
+        $this->assertEquals('Hello world', \Helper\Str::make('Bay world')->replace('Bay', 'Hello')->get());
         $this->assertEquals('Hello world', Str::make('Is my world')->replace('Is my', 'Hello')->get());
         $this->assertEquals('Hello world', Str::make('Ahoj světe')->replace(['Ahoj' => 'Hello', 'světe' => 'world'])->get());
         $this->assertEquals('aAA', Str::make('aAA')->get());
@@ -84,11 +74,11 @@ class StrTest extends TestCase
 
     public function testIsCamelCase()
     {
-        $this->assertTrue( Str::make('helloWorld')->isCamelCase());
-        $this->assertFalse( Str::make('hello_world')->isCamelCase());
-        $this->assertFalse( Str::make('hello world')->isCamelCase());
-        $this->assertFalse( Str::make('hello    world')->isCamelCase());
-        $this->assertFalse( Str::make('hello_World')->isCamelCase());
-        $this->assertFalse( Str::make('Hello__::_World')->isCamelCase());
+        $this->assertTrue(Str::make('helloWorld')->isCamelCase());
+        $this->assertFalse(Str::make('hello_world')->isCamelCase());
+        $this->assertFalse(Str::make('hello world')->isCamelCase());
+        $this->assertFalse(Str::make('hello    world')->isCamelCase());
+        $this->assertFalse(Str::make('hello_World')->isCamelCase());
+        $this->assertFalse(Str::make('Hello__::_World')->isCamelCase());
     }
 }

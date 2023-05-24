@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types=1);
+//declare(strict_types=1);
 /**
  * Class Str
  *
@@ -241,5 +241,26 @@ final class Str
         }
 
         return false;
+    }
+
+    public function toSnake(): Str
+    {
+        $snakeCase = (string) preg_replace('[^a-zA-Z_/u]', '', $this->item);
+        $snakeCase = (string) preg_replace(pattern: '/\s+/', replacement: '_', subject: $snakeCase);
+        $snakeCase = (string) preg_replace(pattern: '/(.)(?=[A-Z])/u', replacement: '$1_', subject: $snakeCase);
+        $snakeCase = strtolower(string: $snakeCase); // Převede vše na malá písmena
+
+        $this->item = $snakeCase;
+        return $this;
+    }
+
+    public function toCamel(): Str
+    {
+        $camelCase = (string) str_replace(' ', '', ucwords($this->item));
+        $camelCase = (string) str_replace('_', '', $camelCase);
+        $camelCase = lcfirst($camelCase);
+
+        $this->item = $camelCase;
+        return $this;
     }
 }
