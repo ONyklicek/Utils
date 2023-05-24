@@ -1,8 +1,8 @@
 <?php
 
-//declare(strict_types=1);
+declare(strict_types=1);
 /**
- * Class Application
+ * Class Str
  *
  * @autor   Ondrej Nyklicek <ondrejnykicek@icloud.com>
  * @project Helper
