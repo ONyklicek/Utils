@@ -11,6 +11,9 @@
       "email": "ondrejnyklicek@icloud.com"
     }
   ],
+  "support": {
+        "issues": "https://github.com/ONyklicek/Helper-tool/issues"
+    },
   "prefer-stable": true,
   "config": {
     "platform": {
