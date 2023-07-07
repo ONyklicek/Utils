@@ -1,8 +1,8 @@
 {
-  "name": "onyklicek/helper-tool",
+  "name": "onyklicek/utils",
   "description": "PHP helper tools to make your life easier.",
   "keywords": ["php", "helper", "tool", "edit", "string"],
-  "homepage": "https://github.com/ONyklicek/Helper-tool",
+  "homepage": "https://github.com/ONyklicek/Utils",
   "type": "library",
   "license": ["BSD-3-Clause"],
   "authors": [
@@ -12,7 +12,7 @@
     }
   ],
   "support": {
-        "issues": "https://github.com/ONyklicek/Helper-tool/issues"
+        "issues": "https://github.com/ONyklicek/Utils/issues"
     },
   "prefer-stable": true,
   "config": {
@@ -23,17 +23,23 @@
     "sort-packages": true
   },
   "require": {
-        "php": ">=8.1",
-        "ext-mbstring": "*"
+    "php": ">=8.1",
+    "ext-mbstring": "*"
   },
   "autoload": {
     "psr-4": {
-      "Helper\\": "src/Helper/"
-    },
-    "classmap": ["src/Helper"]
+      "ONyklicek\\Utils\\": "src/Utils/"
+    }
   },
   "require-dev": {
+    "jetbrains/phpstorm-attributes": "^1.0",
     "phpstan/phpstan": "1.11.x-dev",
-    "phpunit/phpunit": "^9.6"
+    "phpunit/phpunit": "^10.1",
+    "onyklicek/attributes": "dev-main"
+  },
+  "scripts": {
+    "phpstan-test": [
+      "vendor/bin/phpstan analyse -l 9 src/Utils"
+    ]
   }
 }
