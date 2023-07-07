@@ -34,11 +34,6 @@
       "ONyklicek\\Utils\\": "src/Utils/"
     }
   },
-  "autoload-dev"      : {
-    "psr-4" : {
-      "ONyklicek\\PHPUnit\\" : "tests"
-    }
-  },
   "require-dev": {
     "jetbrains/phpstorm-attributes": "^1.0",
     "phpstan/phpstan": "1.11.x-dev",
