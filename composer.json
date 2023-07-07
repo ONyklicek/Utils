@@ -29,10 +29,7 @@
   "autoload": {
     "psr-4": {
       "ONyklicek\\Utils\\": "src/Utils/"
-    },
-    "classmap": [
-      "src/Utils"
-    ]
+    }
   },
   "require-dev": {
     "jetbrains/phpstorm-attributes": "^1.0",
