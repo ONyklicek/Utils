@@ -2,7 +2,7 @@
   "name": "onyklicek/utils",
   "description": "PHP helper tools to make your life easier.",
   "keywords": ["php", "helper", "tool", "edit", "string"],
-  "homepage": "https://github.com/ONyklicek/Helper-tool",
+  "homepage": "https://github.com/ONyklicek/Utils",
   "type": "library",
   "license": ["BSD-3-Clause"],
   "authors": [
@@ -12,7 +12,7 @@
     }
   ],
   "support": {
-        "issues": "https://github.com/ONyklicek/Helper-tool/issues"
+        "issues": "https://github.com/ONyklicek/Utils/issues"
     },
   "prefer-stable": true,
   "config": {
@@ -28,7 +28,7 @@
   },
   "autoload": {
     "psr-4": {
-      "ONyklicek\\Helper\\": "src/Utils/"
+      "ONyklicek\\Utils\\": "src/Utils/"
     },
     "classmap": [
       "src/Utils"
