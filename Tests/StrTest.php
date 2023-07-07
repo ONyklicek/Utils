@@ -3,7 +3,6 @@
 use PHPUnit\Framework\TestCase;
 use ONyklicek\Utils\Str;
 
-
 class StrTest extends TestCase
 {
     public function testReplace()
