@@ -20,6 +20,9 @@
       "php": "8.1.0"
     },
     "optimize-autoloader": true,
+    "allow-plugins"       : {
+      "composer/package-versions-deprecated" : true
+    },
     "sort-packages": true
   },
   "require": {
@@ -28,7 +31,7 @@
   },
   "autoload": {
     "psr-4": {
-      "ONyklicek\\Utils\\": "src/Utils/"
+      "ONyklicek\\Utils\\": "src/Utils"
     }
   },
   "require-dev": {

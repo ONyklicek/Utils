@@ -1,4 +1,4 @@
-[![PHP Composer](https://github.com/ONyklicek/Utils/actions/workflows/php.yml/badge.svg)](https://github.com/ONyklicek/Utils/actions/workflows/php.yml) [![PHPUnit](https://github.com/ONyklicek/Utils/actions/workflows/phpUnit.yml/badge.svg)](https://github.com/ONyklicek/Utils/actions/workflows/phpUnit.yml) [![PHPStan](https://github.com/ONyklicek/Utils/actions/workflows/phpStan.yml/badge.svg)](https://github.com/ONyklicek/Utils/actions/workflows/phpStan.yml) [![Latest Stable Version](http://poser.pugx.org/onyklicek/Utils/v)](https://packagist.org/packages/onyklicek/Utils) [![Latest Unstable Version](http://poser.pugx.org/onyklicek/Utils/v/unstable)](https://packagist.org/packages/onyklicek/Utils) [![License](http://poser.pugx.org/onyklicek/Utils/license)](https://packagist.org/packages/onyklicek/Utils) 
+[![PHP Composer](https://github.com/ONyklicek/Utils/actions/workflows/php.yml/badge.svg)](https://github.com/ONyklicek/Utils/actions/workflows/php.yml) [![PHPUnit](https://github.com/ONyklicek/Utils/actions/workflows/phpUnit.yml/badge.svg)](https://github.com/ONyklicek/Utils/actions/workflows/phpUnit.yml) [![PHPStan](https://github.com/ONyklicek/Utils/actions/workflows/phpStan.yml/badge.svg)](https://github.com/ONyklicek/Utils/actions/workflows/phpStan.yml) [![Latest Stable Version](http://poser.pugx.org/onyklicek/Utils/v)](https://packagist.org/packages/onyklicek/Utils) [![Latest Unstable Version](http://poser.pugx.org/onyklicek/Utils/v/unstable)](https://packagist.org/packages/onyklicek/Utils) [![License](http://poser.pugx.org/onyklicek/Utils/license)](https://packagist.org/packages/onyklicek/Utils)
 
 <!--[![PHP Version Require](http://poser.pugx.org/onyklicek/Utils/require/php)](https://packagist.org/packages/onyklicek/Utils)-->
 
@@ -7,7 +7,7 @@
 
 This library is developed to make your work easier and more enjoyable.
 The code is understandable and user-friendly
-Simplify your work with strings, arrays, etc. 
+Simplify your work with strings, arrays, etc.
 
 ## 📦 Install
 

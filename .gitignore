@@ -1,7 +1,5 @@
 /.phpunit.cache
 /vendor
-/Tests
-/src/Tool
 .env
 index.php
 composer.phar
