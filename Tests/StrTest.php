@@ -1,7 +1,4 @@
 <?php
-
-
-
 use PHPUnit\Framework\TestCase;
 use ONyklicek\Utils\Str;
 

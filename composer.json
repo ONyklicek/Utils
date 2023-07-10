@@ -31,7 +31,7 @@
   },
   "autoload": {
     "psr-4": {
-      "ONyklicek\\Utils\\": "src/Utils/"
+      "ONyklicek\\Utils\\": "src/Utils"
     }
   },
   "require-dev": {
