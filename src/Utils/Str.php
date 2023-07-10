@@ -432,15 +432,19 @@ final class Str
 
         $regex = '/\b' . preg_quote($needle, '/') . '\b/';
         $parts = preg_split($regex, $this->item);
-        $item = array_pop($parts);
 
-        if ($regex === '/\b_\b/') {
-            $separator = '_';
-            $parts = explode($separator, $this->item);
-            $item = array_pop($parts);
+        if(!empty($parts)){
+            $item = end($parts);
+
+            if ($regex === '/\b_\b/') {
+                $separator = '_';
+                $parts = explode($separator, $this->item);
+                $item = end($parts);
+            }
+
+            $this->item = $stripWhitespace ? trim($item) : $item;
         }
 
-        $this->item = $stripWhitespace ? trim($item) : $item;
         return $this;
     }
 
