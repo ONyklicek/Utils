@@ -15,14 +15,13 @@ It's best to use Composer for installation, and you can also find the package on
 
 To install, simply use the command:
 
-```
+```php
 composer require onyklicek/utils
 ```
 
 ## 📝 Usage
 
-```
-php
+```php
 
 require_once 'vendor/autoload.php';
 
