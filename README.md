@@ -22,7 +22,7 @@ composer require onyklicek/utils
 ## 📝 Usage
 
 ```
-<?php
+php
 
 require_once 'vendor/autoload.php';
 
